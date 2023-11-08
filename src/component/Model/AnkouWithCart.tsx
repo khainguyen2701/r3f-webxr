@@ -20,7 +20,7 @@ export default function AnkouWithCart(props) {
       position-y={props.position.y}
       position-z={props.position.z}
     >
-      <primitive object={scene} position={props.position} />
+      <primitive object={scene} />
     </group>
   );
 }

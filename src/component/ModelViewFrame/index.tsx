@@ -6,7 +6,6 @@ import { ModelView } from '../until';
 import { OrbitControls } from '@react-three/drei';
 import { useHitTest, useInteraction, useXR } from '@react-three/xr';
 import { useState } from 'react';
-import KorriganWolf from '../Model/KorriganWolf';
 
 const ModelViewFrame = (props) => {
   const { title } = useCustomAnimations();

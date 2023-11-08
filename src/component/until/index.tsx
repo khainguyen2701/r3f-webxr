@@ -19,9 +19,5 @@ export const ModelView = (props) => {
     Druid: <Druid position={props.position} />,
   }[props.name];
 
-  return (
-    <mesh ref={props.ref} {...props}>
-      {current}
-    </mesh>
-  );
+  return <mesh ref={props.ref}>{current}</mesh>;
 };
