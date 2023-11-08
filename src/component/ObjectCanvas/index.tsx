@@ -24,7 +24,6 @@ const ObjectCanvas = () => {
           </XR>
         </Physics>
 
-        <Background />
         <OrbitControls />
         <Stats />
       </Canvas>

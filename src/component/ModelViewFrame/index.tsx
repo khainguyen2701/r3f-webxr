@@ -1,10 +1,10 @@
+import { useThree } from '@react-three/fiber';
 import React, { useRef, useState } from 'react';
-import { ModelView } from '../until';
-import { useFrame, useThree } from '@react-three/fiber';
 import { useCustomAnimations } from '../../context/AnimationProvider';
+import { ModelView } from '../until';
 
-import { Interactive, useHitTest, useXR } from '@react-three/xr';
 import { OrbitControls } from '@react-three/drei';
+import { Interactive, useHitTest, useXR } from '@react-three/xr';
 
 const ModelViewFrame = (props) => {
   const { title } = useCustomAnimations();
