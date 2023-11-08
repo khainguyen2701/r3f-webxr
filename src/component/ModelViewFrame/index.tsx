@@ -52,11 +52,11 @@ const ModelViewFrame = (props) => {
       <OrbitControls />
       <ambientLight />
       <mesh ref={ref} {...props}>
-        {isPresent && <KorriganWolf position={object.position} />}
+        {isPresent && <ModelView name={title} ref={ref} position={object.position} />}
       </mesh>
-      {/* <ModelView name={title} ref={ref} position={object.position} /> */}
+
       {isPresent && (
-        <mesh rotation-x={-Math.PI / 2} ref={reticleRef}>
+        <mesh rotation-x={-Math.PI / 2} ref={reticleRef} {...props}>
           <ringGeometry args={[0.1, 0.25, 32]} />
           <meshStandardMaterial color={'white'} />
         </mesh>
