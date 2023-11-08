@@ -3,10 +3,6 @@ import React, { createContext, useContext, useMemo, useState } from 'react';
 import { Models } from '../component/until';
 
 const AnimationsContext = createContext({
-  animations: [],
-  setAnimations: () => {},
-  animationIndex: 0,
-  setAnimationIndex: () => {},
   title: '',
 });
 
@@ -16,8 +12,6 @@ const AnimationsProvider = (props) => {
       title: {
         options: Models.map(({ title }) => title),
       },
-      visible: true,
-      color: { value: 'lime' },
     };
   }, []);
 
@@ -25,17 +19,10 @@ const AnimationsProvider = (props) => {
 
   const { title } = controls;
 
-  const [animations, setAnimations] = useState([]);
-  const [animationIndex, setAnimationIndex] = useState(0);
-
   return (
     <>
       <AnimationsContext.Provider
         value={{
-          animations,
-          setAnimations,
-          animationIndex,
-          setAnimationIndex,
           title,
         }}
       >
