@@ -12,7 +12,6 @@ export default function KorriganWolf(props) {
     actions[names[2]]?.fadeIn(0.5).play();
   });
 
-  console.log('props', props.position);
   return (
     <group
       ref={group}

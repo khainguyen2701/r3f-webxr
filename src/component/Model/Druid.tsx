@@ -11,11 +11,17 @@ export default function Druid(props) {
     actions[names[0]]?.fadeIn(0.5).play();
     actions[names[2]]?.fadeIn(0.5).play();
   });
-  console.log('props', { ...props });
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group
+      ref={group}
+      {...props}
+      dispose={null}
+      position-x={props.position.x}
+      position-y={props.position.y}
+      position-z={props.position.z}
+    >
       <group scale={0.91}>
-        <primitive object={scene} position={props.position} />
+        <primitive object={scene} />
       </group>
     </group>
   );

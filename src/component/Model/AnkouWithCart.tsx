@@ -11,7 +11,15 @@ export default function AnkouWithCart(props) {
     actions[names[2]]?.fadeIn(0.5).play();
   });
   return (
-    <group ref={group} {...props} dispose={null} scale={0.5}>
+    <group
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={0.5}
+      position-x={props.position.x}
+      position-y={props.position.y}
+      position-z={props.position.z}
+    >
       <primitive object={scene} position={props.position} />
     </group>
   );
