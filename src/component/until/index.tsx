@@ -13,10 +13,10 @@ export const Models = [
 
 export const ModelView = (props) => {
   const current = {
-    'Korrigan Wolf': <KorriganWolf />,
-    'Young Korriagan': <YoungKorrigan />,
-    'Ankou With Cart': <AnkouWithCart />,
-    Druid: <Druid />,
+    'Korrigan Wolf': <KorriganWolf position={props.position} />,
+    'Young Korriagan': <YoungKorrigan position={props.position} />,
+    'Ankou With Cart': <AnkouWithCart position={props.position} />,
+    Druid: <Druid position={props.position} />,
   }[props.name];
 
   return (
