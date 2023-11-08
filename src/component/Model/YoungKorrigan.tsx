@@ -14,7 +14,7 @@ export default function YoungKorrigan(props) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[0, 0.48, 0]} scale={3}>
-        <primitive object={scene} />
+        <primitive object={scene} position={props.position} />
       </group>
     </group>
   );

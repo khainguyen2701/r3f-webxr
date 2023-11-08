@@ -12,7 +12,7 @@ export default function AnkouWithCart(props) {
   });
   return (
     <group ref={group} {...props} dispose={null} scale={0.5}>
-      <primitive object={scene} />
+      <primitive object={scene} position={props.position} />
     </group>
   );
 }

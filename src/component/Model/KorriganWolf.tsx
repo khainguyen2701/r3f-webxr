@@ -12,8 +12,17 @@ export default function KorriganWolf(props) {
     actions[names[2]]?.fadeIn(0.5).play();
   });
 
+  console.log('props', props.position);
   return (
-    <group ref={group} {...props} dispose={null} position-z={-3} scale={1.5}>
+    <group
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={1.5}
+      position-x={props.position.x}
+      position-y={props.position.y}
+      position-z={props.position.z}
+    >
       <primitive object={scene} />
     </group>
   );
